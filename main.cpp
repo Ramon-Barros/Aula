@@ -148,7 +148,7 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
         cout << "Numero negativo e seu resultado e: " << resultado << endl;
     }*/
     /*Faça um algoritmo que leia uma variável
-    e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação*/
+    e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação
 
      int num1, resultado;
 
@@ -164,5 +164,40 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
         resultado = num1 + 8;
         cout << "Numero impar e seu resultado e: " << resultado << endl;
     }
+    */
+
+    /*Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente*/
+    int a, b,c;
+    cout << "Digite primeiro numero \n";
+    cin  >> a;
+    cout << "Digite segundo numero \n";
+    cin  >> b;
+    cout << "Digite terceiro numero \n";
+    cin  >> c;
+
+    if((a> b) && (b>c) )
+    {
+        cout << "Ordem decrescente "<< a <<" "<< b <<" "<< c <<endl;
+    }
+    if((a> b) && (b<c) )
+    {
+        cout << "Ordem decrescente "<< a <<" "<< c <<" " <<b <<endl;
+    }
+    if (b>c && (c>a))
+    {
+        cout << "Ordem decrescente "<< b <<" "<< c <<" "<< a <<endl;
+    }
+     if (b>c && (c<a))
+    {
+        cout << "Ordem decrescente "<< b<<" " << a <<" "<< c <<endl;
+    }
+    if(c>a && (a>b))
+    {
+        cout << "Ordem decrescente "<< c <<" "<< a <<" "<< b <<endl;
+    } if(c>a &&(a<b))
+    {
+        cout << "Ordem decrescente "<< c <<" "<< b <<" "<< a <<endl;
+    }
+
     return 0;
 }
