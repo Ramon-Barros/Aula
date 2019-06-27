@@ -98,7 +98,7 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
     /** Esse construção de uma pequena calculadora*/
     /** onde irá fazer adição, subtração, multiplicação e divisão*/
 
-    int num1, num2, num3, resultado;
+    /*int num1, num2, num3, resultado;
     char op; //variavel que vai ser dada como opção do que a pessoa deseja
 
     cout << "Digite o primeiro numero  \n";
@@ -130,9 +130,39 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
             cout << "Operacao inexistente" << endl;
             break;
     }
+*/
+/*Encontrar o dobro de um numero caso ele seja positivo e o seu triplo caso ele seja negativo, imprimit o resultado
 
+    int num1, resultado;
 
+    cout << "Digite um numero \n";
+    cin  >> num1;
 
+    if (num1 > 0)
+    {
+        resultado = num1*2;
+        cout << "Numero positivo e seu resultado e: " << resultado << endl;
+    } else
+    {
+        resultado = num1*3;
+        cout << "Numero negativo e seu resultado e: " << resultado << endl;
+    }*/
+    /*Faça um algoritmo que leia uma variável
+    e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação*/
 
+     int num1, resultado;
+
+    cout << "Digite um numero \n";
+    cin  >> num1;
+
+    if (num1 %2 == 0)
+    {
+        resultado = num1 + 5;
+        cout << "Numero par e seu resultado e: " << resultado << endl;
+    } else
+    {
+        resultado = num1 + 8;
+        cout << "Numero impar e seu resultado e: " << resultado << endl;
+    }
     return 0;
 }
