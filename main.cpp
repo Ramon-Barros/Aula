@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         cout << "Esse numero nao eh par ou eh maior que 20";
     }*/
 
-    /*Faça um algoritmo que leia os valores A, B e C e imprima na tela se a soma de A + B é menor que C.
+    /*FaÃ§a um algoritmo que leia os valores A, B e C e imprima na tela se a soma de A + B Ã© menor que C.
     int a,b,c;
 
     cout << "Lendo o valor de A \n";
@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
     }
     */
 
-   /* Faça um algoritmo que leia o nome, o sexo e o estado civil de uma pessoa.
-    Caso sexo seja “F” e estado civil seja “CASADA”, solicitar o tempo de casada (anos). */
+   /* FaÃ§a um algoritmo que leia o nome, o sexo e o estado civil de uma pessoa.
+    Caso sexo seja â€œFâ€ e estado civil seja â€œCASADAâ€, solicitar o tempo de casada (anos). */
 /*
     string nome;
 
@@ -51,11 +51,11 @@ int main(int argc, char *argv[])
         cin >> tempoCasado;
     } else
     {
-        cout << "Não queremos seus dados";
+        cout << "NÃ£o queremos seus dados";
      }
 */
 
-/*Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar. */
+/*FaÃ§a um algoritmo para receber um nÃºmero qualquer e informar na tela se Ã© par ou Ã­mpar. */
 
    /* int num;
 
@@ -72,9 +72,9 @@ int main(int argc, char *argv[])
         cout << "o numero digitado eh impar";
     }
 */
-/* Faça  um  algoritmo  que  leia  dois  valores  inteiros  A  e  B  se  os  valores  forem  iguais  deverá  se  somar  os  dois,
-  caso  contrário  multiplique  A  por  B.
-Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para uma variável C e mostrar seu conteúdo na tela*/
+/* FaÃ§a  um  algoritmo  que  leia  dois  valores  inteiros  A  e  B  se  os  valores  forem  iguais  deverÃ¡  se  somar  os  dois,
+  caso  contrÃ¡rio  multiplique  A  por  B.
+Ao  final  de  qualquer  um  dos  cÃ¡lculos  deve-se  atribuir o resultado para uma variÃ¡vel C e mostrar seu conteÃºdo na tela*/
 
 /*
     int num1, num2, num3;
@@ -95,11 +95,11 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
         cout << "O valor de C: " << num3;
     }*/
 
-    /** Esse construção de uma pequena calculadora*/
-    /** onde irá fazer adição, subtração, multiplicação e divisão*/
+    /** Esse construÃ§Ã£o de uma pequena calculadora*/
+    /** onde irÃ¡ fazer adiÃ§Ã£o, subtraÃ§Ã£o, multiplicaÃ§Ã£o e divisÃ£o*/
 
     /*int num1, num2, num3, resultado;
-    char op; //variavel que vai ser dada como opção do que a pessoa deseja
+    char op; //variavel que vai ser dada como opÃ§Ã£o do que a pessoa deseja
 
     cout << "Digite o primeiro numero  \n";
     cin >> num1;
@@ -116,7 +116,7 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
         break;
     case '-':
         resultado = num1 - num2;
-        cout << "A diferença dos valores: "<< resultado << endl;
+        cout << "A diferenÃ§a dos valores: "<< resultado << endl;
         break;
     case '*':
         resultado = num1 * num2;
@@ -147,8 +147,8 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
         resultado = num1*3;
         cout << "Numero negativo e seu resultado e: " << resultado << endl;
     }*/
-    /*Faça um algoritmo que leia uma variável
-    e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação
+    /*FaÃ§a um algoritmo que leia uma variÃ¡vel
+    e some 5 caso seja par ou some 8 caso seja Ã­mpar, imprimir o resultado desta operaÃ§Ã£o
 
      int num1, resultado;
 
@@ -166,7 +166,8 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
     }
     */
 
-    /*Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente*/
+    /*Escreva um algoritmo que leia trÃªs valores inteiros e diferentes e mostre-os em ordem decrescente*/
+    /*
     int a, b,c;
     cout << "Digite primeiro numero \n";
     cin  >> a;
@@ -198,6 +199,37 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para u
     {
         cout << "Ordem decrescente "<< c <<" "<< b <<" "<< a <<endl;
     }
+
+    /*
+    Tendo  como  dados  de  entrada  a  altura  e  o  sexo  de  uma  pessoa,
+    construa  um  algoritmo  que  calcule seu peso ideal, utilizando as seguintes fÃ³rmulas:
+    â—para homens: (72.7 * h) â€“ 58;
+    â—para mulheres: (62.1 * h) â€“ 44.7.
+    */
+
+    float altura, homem, mulher;
+    char sexo;
+    string nome;
+
+        cout << "Digite seu nome: "<< endl;
+        cin >> nome;
+        cout << "Digite sua altura: "<< endl;
+        cin >> altura;
+        cout << "Digite seu M (masculino) F (feminino):" << endl;
+        cin >> sexo;
+
+        switch (sexo)
+        {
+
+        case 'm':
+            homem = (72.7*altura) - 58;
+            cout << nome << " Seu peso ideal: " << homem <<endl;
+            break;
+        case 'f':
+            mulher = (62.1 *altura) - 44.7;
+            cout << nome << " Seu peso ideal: " << mulher <<endl;
+        }
+
 
     return 0;
 }
