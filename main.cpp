@@ -205,7 +205,7 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para 
     construa  um  algoritmo  que  calcule seu peso ideal, utilizando as seguintes fórmulas:
     ●para homens: (72.7 * h) – 58;
     ●para mulheres: (62.1 * h) – 44.7.
-    */
+
 
     float altura, homem, mulher;
     char sexo;
@@ -229,7 +229,44 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para 
             mulher = (62.1 *altura) - 44.7;
             cout << nome << " Seu peso ideal: " << mulher <<endl;
         }
+        */
+/*
+O  IMC  –  Indice  de  Massa  Corporal  é  um  critério  da  Organização  Mundial  de  Saúde  para  dar  uma indicação
+ sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / ( altura )2
+ Elabore  um  algoritmo  que  leia  o  peso  e  a  altura  de  um  adulto  e  mostre  sua  condição  de  acordo  com a tabela abaixo.
+  IMC em adultos Condição
+   Abaixo de 18,5 Abaixo do peso
+   Entre 18,5 e 25 Peso normal
+   Entre 25 e 30 Acima do peso
+   Acima de 30 obeso
+*/
 
+    float altura, peso, imc;
+
+    string nome;
+
+        cout << "Digite seu nome: "<< endl;
+        cin >> nome;
+        cout << "Digite sua altura: "<< endl;
+        cin >> altura;
+        cout << "Digite seu peso:" << endl;
+        cin >> peso;
+
+        imc = peso / (altura * altura);
+
+        if(imc < 18.5)
+        {
+            cout << nome << " seu IMC e: "<< imc <<" voce esta ABAIXO do peso" << endl;
+        } if ((imc > 18.5) && (imc < 25))
+        {
+            cout << nome << " seu IMC e: "<< imc <<" voce esta com peso NORMAL" << endl;
+        } if ((imc > 25) && (imc < 30))
+        {
+            cout << nome << " seu IMC e: "<< imc <<" voce esta ACIMA do peso" << endl;
+        } if(imc> 30)
+        {
+            cout << nome << " seu IMC e: "<< imc <<" voce esta OBESO" << endl;
+        }
 
     return 0;
 }
