@@ -228,6 +228,10 @@ Ao  final  de  qualquer  um  dos  cálculos  deve-se  atribuir o resultado para 
         case 'f':
             mulher = (62.1 *altura) - 44.7;
             cout << nome << " Seu peso ideal: " << mulher <<endl;
+            break;
+        default:
+            cout << "Operacao inexistente" << endl;
+            break;
         }
         */
 /*
@@ -239,7 +243,7 @@ O  IMC  –  Indice  de  Massa  Corporal  é  um  critério  da  Organização  
    Entre 18,5 e 25 Peso normal
    Entre 25 e 30 Acima do peso
    Acima de 30 obeso
-*/
+
 
     float altura, peso, imc;
 
@@ -266,6 +270,52 @@ O  IMC  –  Indice  de  Massa  Corporal  é  um  critério  da  Organização  
         } if(imc> 30)
         {
             cout << nome << " seu IMC e: "<< imc <<" voce esta OBESO" << endl;
+        }
+        */
+        /*
+         Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço
+        normal de etiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir
+        para ler qual acondição de pagamento escolhida e efetuar o cálculo adequado.
+        Código Condição de pagamento
+        1 À vista em dinheiro ou cheque, recebe 15% de desconto
+        2 À vista no cartão de crédito, recebe 10% de desconto
+        3 Em duas vezes, preço normal de etiqueta sem juros
+        4 Em duas vezes, preço normal de etiqueta mais juros de 10 */
+
+        float preco, desconto;
+        string produto;
+        char op;
+
+        cout << "Informe o produto" << endl;
+        cin >> produto;
+        cout << "Informe o preco do produto" << endl;
+        cin >> preco;
+        cout << "Escolha a forma de pagamento:\n A vista (v)\n Cartao (c)\n Duas vezes sem juros (s)\n Duas vezes com juros (j)" << endl;
+        cin >> op;
+
+
+        switch (op)
+        {
+            case 'v':
+                desconto = preco*0.85;
+                cout << "Seu pagamento R$ " << desconto <<" reais" << endl;
+                break;
+            case 'c':
+                desconto = preco*0.9;
+                cout << "Seu pagamento R$ " << desconto <<" reais" << endl;
+                break;
+            case 's':
+                desconto = preco/2;
+                cout << "Seu pagamento parcelado em 2x de R$ " << desconto <<" reais" << endl;
+                break;
+            case 'j':
+                desconto = (preco+(preco*0.1))/2;
+                cout << "Seu pagamento R$ " << desconto <<" reais" << endl;
+                break;
+            default:
+            cout << "Operacao inexistente" << endl;
+            break;
+
         }
 
     return 0;
