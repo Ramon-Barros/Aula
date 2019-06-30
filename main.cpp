@@ -280,7 +280,7 @@ O  IMC  –  Indice  de  Massa  Corporal  é  um  critério  da  Organização  
         1 À vista em dinheiro ou cheque, recebe 15% de desconto
         2 À vista no cartão de crédito, recebe 10% de desconto
         3 Em duas vezes, preço normal de etiqueta sem juros
-        4 Em duas vezes, preço normal de etiqueta mais juros de 10 */
+        4 Em duas vezes, preço normal de etiqueta mais juros de 10
 
         float preco, desconto;
         string produto;
@@ -315,8 +315,48 @@ O  IMC  –  Indice  de  Massa  Corporal  é  um  critério  da  Organização  
             default:
             cout << "Operacao inexistente" << endl;
             break;
-
         }
+        */
+        /*Escreva um algoritmo que leia o número de identificação, as 3 notas obtidas por um aluno nas
+        3 verificações e a média dos exercícios que fazem parte da avaliação, e calcule a média de
+        aproveitamento, usando a fórmula:
+        MA := (nota1 + nota 2 * 2 + nota 3 * 3 + ME)/7
+        A atribuição dos conceitos obedece a tabela abaixo. O algoritmo deve escrever o número do aluno,
+        suas notas, a média dos exercícios, a média de aproveitamento, o conceito correspondente e a
+        mensagem 'Aprovado' se o conceito for A, B ou C, e 'Reprovado' se o conceito for D ou E.
+        Média de aproveitamento Conceito
+            >= 90 A
+            >= 75 e < 90 B
+            >= 60 e < 75 C
+            >= 40 e < 60 D
+            < 40 E */
+            float nota1, nota2, nota3, MA, ME;
+            string nome;
+
+            cout << "Digite o nome do aluno" << endl;
+            cin >> nome;
+            cout << "Digite as notas do aluno" << endl;
+            cin >> nota1>>nota2>>nota3;
+            cout << "Digite a media de exercicio"<< endl;
+            cin >> ME;
+            MA = (nota1 + nota2*2 + nota3*3 + ME)/7;
+
+            if (MA >= 9.0)
+            {
+                cout << nome << " voce foi aprovado com conceito A"<< endl;
+            } if (MA < 9.0 && MA>=7.5)
+            {
+                cout << nome << " voce foi aprovado com conceito B"<< endl;
+            } if (MA < 7.5 && MA >=6.0)
+            {
+                cout << nome << " voce foi aprovado com conceito C"<< endl;
+            } if (MA < 6.0 && MA >= 4.0)
+            {
+                cout << nome << " voce foi aprovado com conceito D"<< endl;
+            } if (MA < 4.0)
+            {
+                cout << nome << " voce foi aprovado com conceito E"<< endl;
+            }
 
     return 0;
 }
